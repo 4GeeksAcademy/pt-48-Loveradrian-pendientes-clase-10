@@ -1,0 +1,71 @@
+¿Cuales son las diferencias entre los operadores de igualdad? // = ; == ; ===; 
+
+assignment operator (=)
+En JavaScript podemos almacenar valores en una variable con 
+el operador de asignamiento (=) //assignment operator en ingles.
+
+let myVariable = 5;
+
+Esto asigna el valor numerico 5 a myVariable. 
+
+let myVar;
+myVar = 5;
+
+Primero, este codigo crea una variable llamada myVar. Luego, el codigo asigna 5 a myVar.
+Ahora, si myVar aparece de nuevo en el codigo, el programa la tratara como si valiera 5. 
+
+equality operator (==) 
+
+el operador de igualdad compara dos valores y retorna true si estos son equivalentes, 
+o retorna falso si estos no son equivalentes. Notemos que el equality operator es diferente del
+assignment operator (=), donde este ultimo asigna el valor de su derecha con la variable de su izquierda. 
+
+function equalityTest(myVal) {
+  if (myVal == 10) {
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+En el caso anterior, si myVal es igual a 10, el equality operator retornara true, por lo tanto, 
+el codigo dentro de los curly brackets se ejecutara y la funcion retornara "Equal". 
+Si no fuera el caso, la funcion retornara "Not Equal". 
+
+Para que JavaScript pueda comparar dos tipos de datos diferentes (Por ejemplo, numeros y letras),
+este debe convertir un tipo de dato en el otro. Esto es conocido como Type Coercion. 
+Una vez que lo hace, puede comparar lo siguiente: 
+
+1 == 1 // true
+1 == 2 // false
+1 == "1" // true
+"3" == 3 // true
+
+Strict equality (===)
+
+Es la contra parte del equality operator (==). 
+A diferencia del equality operator, el cual convierte ambos valores a un tipo de dato 
+en comun para compararlos, el strict equality opearator no hace esta conversion. 
+
+Si los valores que se estan comparando son de diferentes tipos, son considerados no iguales, 
+y el strict equality operator retornara false. 
+
+ejemplos:
+
+3 ===  3  // true
+3 === '3' // false
+
+En el segundo ejemplo, 3 es un dato numerico y '3' es un dato de texto.
+
+Resumen y ejemplos: 
+
+- assignment operartor solo asigna, no compara valores unos con otros. 
+- equality operator compara los datos de ambos lados, haciendo una conversion de datos si es necesario.
+- strict equality operator compara sin hacer la conversion entre los datos. 
+
+- let myVal = 5; // asignamos el valor numero 5 a la variable myVal
+- 3 == '3' //true, ya que el equality operator hace una conversion de datos entre ellos, y los compara
+  3 == 2 // false, ya que aunque tambien hace la conversion, dato numerico 3 es distinto de dato numerico 2. Tambien aplicaria si fueran datos de texto '3' y '2'
+
+- 3 === 3 // true, ya que 3 y 3 son iguales, tanto en valor como en tipo de dato.
+- 3 === 7 // false, ya que aunque son el mismo tipo de dato (numerico), 3 no es igual a 7.
+
