@@ -1,5 +1,9 @@
 ¿Cuales son las diferencias entre los operadores de igualdad? // = ; == ; ===; 
 
+video explicativo (comienza en el minuto 0:00); 
+
+https://youtu.be/kVGsrqYZZxM
+
 assignment operator (=)
 En JavaScript podemos almacenar valores en una variable con 
 el operador de asignamiento (=) //assignment operator en ingles.

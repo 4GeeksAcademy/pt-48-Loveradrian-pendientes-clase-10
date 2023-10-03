@@ -1,26 +1,21 @@
-//Nota importante: Diferencia entre arrays y objetos => arrays = lista de datos ordenados / objetos = Diccionarios con propiedades y metodos.
 
-Video con la explicacion (Comienza en el minuto 4:25); 
+Resumen y ejemplos de lo que encontraremos: 
 
-https://youtu.be/kVGsrqYZZxM
+Video explicativo: https://youtu.be/kVGsrqYZZxM
 
+- assignment operartor solo asigna, no compara valores unos con otros. 
+- equality operator compara los datos de ambos lados, haciendo una conversion de datos si es necesario.
+- strict equality operator compara sin hacer la conversion entre los datos. 
 
-Para comenzar a entender las listas de manera apropiada podemos comenzar con 
-aprender a utilizar los siguientes metodos o keywords de las arrays: 
+- let myVal = 5; // asignamos el valor numero 5 a la variable myVal
+
+- 3 == '3' //true, ya que el equality operator hace una conversion de datos entre ellos, y los compara
+  3 == 2 // false, ya que aunque tambien hace la conversion, dato numerico 3 es distinto de dato numerico 2. Tambien aplicaria si fueran datos de texto '3' y '2'
+
+- 3 === 3 // true, ya que 3 y 3 son iguales, tanto en valor como en tipo de dato.
+- 3 === 7 // false, ya que aunque son el mismo tipo de dato (numerico), 3 no es igual a 7.
 
 -forEach: 
-
-El método forEach de JavaScript es una de las varias formas de recorrer un arreglo.
-
-Teniendo en cuenta que tenemos el siguiente arreglo a continuación:
-
-const numeros = [1, 2, 3, 4, 5];
-
-Utilizando el tradicional "bucle for" para recorrer el arreglo sería así:
-
-for (i = 0; i < numeros.length; i++) {
-  console.log(numeros[i]);
-} 
 
 El método forEach pasa una función para cada elemento del arreglo 
 junto con los siguientes parámetros:
@@ -40,24 +35,7 @@ numeros.forEach(numero => console.log(numero)); //Para cada elemento en "numeros
 
 Esta funcion deberia imprimir cada elemento del array. 
 
-// parametros opcionales de forEach: 
-
- El primero es el parámetro "index", que representa el número de índice de cada elemento.
-
-Básicamente, podemos ver el número de índice de un elemento si lo incluimos como segundo parámetro:
-
-numeros.forEach((numero, index) => {
-    console.log('Indice: ' + index + ' Valor: ' + numero);
-});
-
-El parámetro del arreglo es el propio arreglo. También es opcional 
-y se puede utilizar si es necesario en varias operaciones. 
-En caso contrario, si lo llamamos, simplemente se imprimirá tantas veces 
-como el número de elementos del arreglo:
-
-numeros.forEach((numero, index, arreglo) => {
-    console.log(arreglo);
-});
+-map: 
 
 -map:
 El metodo map() se utiliza para crear un nuevo array a partir de uno ya existente,
@@ -65,7 +43,8 @@ aplicando una funcion a cada uno de los elementos del array inicial.
 
 const numeros = [1, 2, 3, 4];
 const duplicar = numeros.map(elemento => elemento * 2);
-console.log(duplicar); // [2, 4, 6, 8]
+console.log(duplicar); 
+
 
 -filter:
 
